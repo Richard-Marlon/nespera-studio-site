@@ -1,0 +1,29 @@
+[build]
+  command = "python3 build.py"
+  publish = "dist"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+# Cabeçalhos de segurança e cache
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com; img-src 'self' data: https://*.google-analytics.com; style-src 'self'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Redireciona o endereço provisório do Netlify para o domínio próprio (ajuste após configurar o domínio)
+# [[redirects]]
+#   from = "https://SEU-SITE.netlify.app/*"
+#   to = "https://nespera.studio/:splat"
+#   status = 301
+#   force = true

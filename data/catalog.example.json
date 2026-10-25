@@ -1,0 +1,33 @@
+{
+  "_aviso": "ARQUIVO DE EXEMPLO. Não é publicado. Copie a estrutura para catalog.json com dados reais.",
+  "categorias": [
+    { "slug": "ilustracoes", "nome": "Ilustrações" },
+    { "slug": "impressos", "nome": "Impressos" }
+  ],
+  "itens": [
+    {
+      "slug": "exemplo-obra",
+      "nome": "Exemplo de obra",
+      "categoria": "ilustracoes",
+      "resumo": "Uma frase que explica o que é a peça.",
+      "descricao": [
+        "Primeiro parágrafo da descrição: técnica, inspiração, contexto.",
+        "Segundo parágrafo, se necessário."
+      ],
+      "detalhes": [
+        { "rotulo": "Técnica", "valor": "Aquarela e colagem digital" },
+        { "rotulo": "Dimensões", "valor": "21 x 29,7 cm" }
+      ],
+      "imagens": [
+        { "src": "/assets/img/post-em-breve.webp", "alt": "Ilustração de duas mãos que quase se tocam, cercadas por flores e pássaros" }
+      ],
+      "preco": 120.00,
+      "disponibilidade": "InStock",
+      "link_compra": "",
+      "faq": [
+        { "p": "Como é feita a entrega?", "r": "Resposta real do estúdio." }
+      ],
+      "destaque": true
+    }
+  ]
+}

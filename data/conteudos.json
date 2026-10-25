@@ -1,0 +1,7 @@
+{
+  "itens": [
+    { "tipo": "texto", "texto": "desde dois mil e vinte seis", "titulo": "O começo", "contexto": "O estúdio marca o ano em que começou.", "link": "https://www.instagram.com/nespera.studio/" },
+    { "tipo": "imagem", "imagem": "/assets/img/post-em-breve.webp", "alt": "Ilustração de duas mãos que quase se tocam, cercadas por flores, pássaros e uma borboleta, com o texto 'em breve produtos na vitrine'", "titulo": "Em breve, a vitrine", "contexto": "O anúncio dos primeiros produtos do estúdio.", "link": "https://www.instagram.com/nespera.studio/" },
+    { "tipo": "marca", "titulo": "A marca", "contexto": "A primeira publicação do Nêspera Studio.", "link": "https://www.instagram.com/nespera.studio/" }
+  ]
+}
