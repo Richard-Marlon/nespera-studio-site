@@ -65,7 +65,7 @@ def page(path, title, desc, body, active="", ld=None, noindex=False, og_img="/as
     canon = BASE + path
     lds = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>'
                   for x in (ld or []))
-    nav = "".join(f'<a href="{h}"{" aria-current=\"page\"" if h == active else ""}>{t}</a>'
+    nav = "".join(f'<a href="{h}"{" aria-current=page" if h == active else ""}>{t}</a>'
                   for h, t in NAV)
     robots = '<meta name="robots" content="noindex, follow">' if noindex else ""
     if not noindex and path != "/404.html":
@@ -269,7 +269,7 @@ write("/vitrine/", page("/vitrine/", "Vitrine", "Conheça as obras e produtos do
 # ---------- Páginas de cada item ----------
 for i in itens:
     path = f"/vitrine/{i['slug']}/"
-    imgs = "".join(f'<img src="{e(m["src"])}" alt="{e(m["alt"])}" width="900" height="1125"{" loading=\"lazy\"" if n else ""}>'
+    imgs = "".join(f'<img src="{e(m["src"])}" alt="{e(m["alt"])}" width="900" height="1125"{" loading=lazy" if n else ""}>'
                    for n, m in enumerate(i.get("imagens", []))) or '<div class="ph" aria-hidden="true"></div>'
     det = "".join(f'<div><dt>{e(d["rotulo"])}</dt><dd>{e(d["valor"])}</dd></div>' for d in i.get("detalhes", []))
     faq = "".join(f'<details><summary>{e(f["p"])}</summary><p>{e(f["r"])}</p></details>' for f in i.get("faq", []))
